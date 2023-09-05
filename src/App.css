@@ -1,0 +1,41 @@
+html{
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0369a1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #06b6d4;
+}
+.soulP{
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.gradientHover{
+  transition: 0.5s;
+  overflow: hidden;
+  z-index: 3;
+}
+.gradientHover::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  background: linear-gradient(90deg, rgba(59,130,246,1) 0%, rgba(139,92,246,1) 100%);
+  z-index: -1;
+  transition: 0.5s;
+}
+.gradientHover:hover::before{
+  right: 0;
+}
+.gradientHover:hover{
+  color: white;
+}
